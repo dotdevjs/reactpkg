@@ -1,10 +1,42 @@
 {
-  
-  
   "version": 2,
-  
-  "projects": {},
-  "cli": {
-    "defaultCollection": "@nrwl/workspace"
+  "cli": { "defaultCollection": "@nrwl/react" },
+  "generators": { "@nrwl/react": { "application": { "babel": true } } },
+  "projects": {
+    "inversify": {
+      "root": "packages/inversify",
+      "sourceRoot": "packages/inversify/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/inversify",
+            "tsConfig": "packages/inversify/tsconfig.lib.json",
+            "project": "packages/inversify/package.json",
+            "entryFile": "packages/inversify/src/index.ts",
+            "external": ["react", "react-dom"],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [{ "glob": "README.md", "input": ".", "output": "." }]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["packages/inversify/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/packages/inversify"],
+          "options": {
+            "jestConfig": "packages/inversify/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
   }
 }
