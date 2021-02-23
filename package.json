@@ -2,8 +2,8 @@
   "name": "reactpkg",
   "version": "0.0.0",
   "license": "MIT",
-  "pre-commit": "lint-staged",
   "scripts": {
+    "pre-commit": "lint-staged",
     "nx": "nx",
     "start": "nx serve",
     "build": "nx build",
