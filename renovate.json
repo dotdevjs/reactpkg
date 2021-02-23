@@ -1,13 +1,3 @@
 {
-  "extends": ["config:base"],
-  "hostRules": [
-    {
-      "hostName": "registry.npmjs.org",
-      "enabled": false
-    },
-    {
-      "hostName": "npm.local.dotdev.ru",
-      "enabled": true
-    }
-  ]
+  "extends": ["config:base"]
 }
