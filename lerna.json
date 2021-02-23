@@ -1,0 +1,13 @@
+{
+  "packages": ["packages/*", "dist/*"],
+  "version": "0.0.0",
+  "command": {
+    "publish": {
+      "ignoreChanges": ["ignored-file", "*.md"],
+      "registry": "https://npm.local.dotdev.ru/"
+    },
+    "bootstrap": {
+      "npmClientArgs": ["--no-package-lock"]
+    }
+  }
+}
