@@ -1,4 +1,5 @@
 {
   "name": "@reactpkg/inversify",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "gitHead": "c93f379508035390c7f9471c6dfbebead4b2ea6e"
 }

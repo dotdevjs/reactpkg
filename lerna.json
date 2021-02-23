@@ -1,5 +1,5 @@
 {
-  "packages": ["packages/*", "dist/*"],
+  "packages": ["dist/*"],
   "version": "0.0.0",
   "command": {
     "publish": {
