@@ -31,8 +31,8 @@
     "core-js": "3.10.0",
     "document-register-element": "1.14.10",
     "inversify": "5.0.5",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "tslib": "2.1.0"
   },
   "devDependencies": {
