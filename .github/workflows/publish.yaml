@@ -29,7 +29,7 @@ jobs:
       - run: nx affected:build --all
       - run: npm run lerna -- publish from-package --contents dist -y
 
-      - uses: voxmedia/github-action-slack-notify-build@v1
+      - uses: voxmedia/github-action-slack-notify-build@v2
         name: Notify slack success
         if: success()
         with:
