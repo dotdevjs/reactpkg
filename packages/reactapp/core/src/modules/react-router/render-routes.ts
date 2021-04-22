@@ -8,7 +8,7 @@ import {
 import { RouteCollectionService } from './route-collection.service';
 
 export function renderRoutes(
-  routes: RouteConfig[] | undefined = [],
+  routes: any[] | undefined = [],
   extraProps?: any,
   switchProps?: SwitchProps
 ): JSX.Element {
