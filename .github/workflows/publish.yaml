@@ -37,5 +37,4 @@ jobs:
           status: SUCCESS
           color: good
         env:
-          SLACK_BOT_TOKEN: xoxb-83328720358-1976957551735-ucDKEpChiTZ9w1MaqnuIKqay
-          #SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
