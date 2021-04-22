@@ -47,7 +47,7 @@
           "executor": "@nrwl/web:package",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/packages/reactapp/core",
+            "outputPath": "packages/reactapp/core/dist",
             "tsConfig": "packages/reactapp/core/tsconfig.lib.json",
             "project": "packages/reactapp/core/package.json",
             "entryFile": "packages/reactapp/core/src/index.ts",
