@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/*"
+    "packages/*",
+    "packages/reactapp/*"
   ],
   "version": "0.0.7",
   "command": {
