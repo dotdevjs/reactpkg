@@ -1,14 +1,14 @@
 {
   "name": "@reactapp/core",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "gitHead": "5b827f44018b08d9b109f4146d685e7a075633fa",
   "dependencies": {
+    "@types/react-router-config": "5.0.2",
+    "@types/react-router-dom": "5.1.7",
     "i18next": "^20.2.1",
     "react-i18next": "^11.8.13",
     "react-router-config": "5.1.1",
     "react-router-dom": "5.2.0",
-    "react-router-named-routes": "0.0.23",
-    "@types/react-router-config": "5.0.2",
-    "@types/react-router-dom": "5.1.7"
+    "react-router-named-routes": "0.0.23"
   }
 }
