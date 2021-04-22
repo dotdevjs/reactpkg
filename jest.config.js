@@ -1,3 +1,6 @@
 module.exports = {
-  projects: ['<rootDir>/packages/inversify'],
+  projects: [
+    '<rootDir>/packages/inversify',
+    '<rootDir>/packages/reactapp/core',
+  ],
 };

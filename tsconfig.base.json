@@ -18,7 +18,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@reactpkg/inversify": ["packages/inversify/src/index.ts"]
+      "@reactpkg/inversify": ["packages/inversify/src/index.ts"],
+      "@reactapp/core": ["packages/reactapp/core/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
