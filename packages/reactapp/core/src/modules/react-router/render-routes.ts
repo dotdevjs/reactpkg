@@ -1,0 +1,21 @@
+import { Container } from '@reactpkg/inversify';
+import { SwitchProps } from 'react-router';
+import {
+  renderRoutes as renderRoutesBase,
+  RouteConfig,
+} from 'react-router-config';
+
+import { RouteCollectionService } from './route-collection.service';
+
+export function renderRoutes(
+  routes: RouteConfig[] | undefined = [],
+  extraProps?: any,
+  switchProps?: SwitchProps
+): JSX.Element {
+  try {
+    routes = [...Container.get(RouteCollectionService).getRoutes(), ...routes];
+  } catch (e) {
+    console.error(e);
+  }
+  return renderRoutesBase(routes, extraProps, switchProps);
+}
