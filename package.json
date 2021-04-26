@@ -30,7 +30,7 @@
   "dependencies": {
     "core-js": "3.11.0",
     "document-register-element": "1.14.10",
-    "i18next": "^20.2.1",
+    "i18next": "20.2.2",
     "inversify": "5.0.5",
     "lodash": "^4.17.21",
     "react": "17.0.2",
