@@ -29,12 +29,10 @@ jobs:
       - run: nx affected:build --all
       - run: npm run lerna -- publish from-package --contents dist -y
 
-      - uses: voxmedia/github-action-slack-notify-build@v1
-        name: Notify slack success
-        if: success()
-        with:
-          channel: app-alerts
-          status: SUCCESS
-          color: good
+      - name: Slack Notification
+        uses: 'rtCamp/action-slack-notify@v2'
         env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_MESSAGE: '@reactpkg Packages published :rocket:'
+          SLACK_TITLE: 'CI Job runner'
