@@ -14,9 +14,7 @@ export class RouteCollectionService {
     let routes: RouteConfig[] = [];
     const tagName = isLogged ? ROUTES_TOKEN : AUTH_ROUTES_TOKEN;
     try {
-      routes = [
-        ...flattenDeep(this.container.getAllTagged(tagName, tagName, [])),
-      ];
+      routes = flattenDeep(this.container.getAllTagged(tagName, tagName, []));
     } catch (e) {
       console.error(e);
     }
