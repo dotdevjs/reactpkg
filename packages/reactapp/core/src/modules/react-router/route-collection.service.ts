@@ -1,9 +1,9 @@
-// import { flattenDeep } from 'lodash';
+import { flattenDeep } from 'lodash';
 // import { RouteProps } from 'react-router';
 import { Inject, Injectable, InversifyContainer } from '@reactpkg/inversify';
 import { RouteConfig } from 'react-router-config';
 
-// import { ROUTES_TOKEN } from './react-router.constants';
+import { AUTH_ROUTES_TOKEN, ROUTES_TOKEN } from './react-router.constants';
 
 @Injectable()
 export class RouteCollectionService {
@@ -11,14 +11,13 @@ export class RouteCollectionService {
   private container: InversifyContainer;
 
   getRoutes(isLogged = true): RouteConfig[] {
-    const routes: RouteConfig[] = [];
-    // const tagName = isLogged ? ROUTES_TOKEN : ROUTES_TOKEN; // CoreService.AUTH_ROUTES;
+    let routes: RouteConfig[] = [];
+    const tagName = isLogged ? ROUTES_TOKEN : AUTH_ROUTES_TOKEN;
     try {
-      // routes = [
-      //...flattenDeep(this.container.getAllTagged(tagName, tagName, [])),
-      // ];
+      routes = [
+        ...flattenDeep(this.container.getAllTagged(tagName, tagName, [])),
+      ];
     } catch (e) {
-      // TODO: refactor
       console.error(e);
     }
     return routes;
