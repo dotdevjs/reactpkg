@@ -2,7 +2,7 @@ import { Container } from '@reactpkg/inversify';
 import { SwitchProps } from 'react-router';
 import {
   renderRoutes as renderRoutesBase,
-  RouteConfig,
+  // RouteConfig,
 } from 'react-router-config';
 
 import { RouteCollectionService } from './route-collection.service';
