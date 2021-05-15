@@ -1,9 +1,9 @@
 {
   "name": "@reactpkg/inversify",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "dependencies": {
-    "reflect-metadata": "0.1.13",
-    "inversify": "5.1.1"
+    "inversify": "5.1.1",
+    "reflect-metadata": "0.1.13"
   },
   "gitHead": "5b827f44018b08d9b109f4146d685e7a075633fa"
 }
