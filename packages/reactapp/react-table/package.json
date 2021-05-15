@@ -1,0 +1,14 @@
+{
+  "name": "@reactapp/react-table",
+  "version": "0.0.1",
+  "dependencies": {
+    "react-bus": "3.0.0",
+    "react-data-table-component": "6.11.7"
+  },
+  "devDependencies": {
+    "@types/bootbox": "5.2.1"
+  },
+  "peerDependencies": {
+    "react-bootstrap": "~1.6.0"
+  }
+}

@@ -16,5 +16,9 @@
     }
   },
   "workspaceLayout": { "appsDir": "e2e", "libsDir": "packages" },
-  "projects": { "inversify": { "tags": [] }, "reactapp-core": { "tags": [] } }
+  "projects": {
+    "inversify": { "tags": [] },
+    "reactapp-core": { "tags": [] },
+    "reactapp-react-table": { "tags": [] }
+  }
 }

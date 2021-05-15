@@ -19,7 +19,11 @@
     "baseUrl": ".",
     "paths": {
       "@reactpkg/inversify": ["packages/inversify/src/index.ts"],
-      "@reactapp/core": ["packages/reactapp/core/src/index.ts"]
+      "@reactapp/core": ["packages/reactapp/core/src/index.ts"],
+      "@reactpkg/reactapp/react-table": [
+        "packages/reactapp/react-table/src/index.ts"
+      ],
+      "@reactapp/react-table": ["packages/reactapp/react-table/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
