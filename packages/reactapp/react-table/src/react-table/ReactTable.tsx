@@ -10,6 +10,7 @@ import React, {
 import { Button } from 'react-bootstrap';
 import DataTable, { IDataTableColumn } from 'react-data-table-component';
 import { useBus } from 'react-bus';
+import bootbox from 'bootbox';
 
 export interface ReactTableProps {
   dataProvider(params: FetchDataParams): any;

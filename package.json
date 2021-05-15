@@ -35,6 +35,7 @@
     "inversify": "5.0.5",
     "lodash": "4.17.21",
     "react": "17.0.2",
+    "react-bootstrap": "^1.6.0",
     "react-bus": "^3.0.0",
     "react-data-table-component": "^6.11.7",
     "react-dom": "17.0.2",
@@ -43,7 +44,8 @@
     "react-router-config": "5.1.1",
     "react-router-dom": "5.2.0",
     "react-router-named-routes": "0.0.23",
-    "regenerator-runtime": "0.13.7"
+    "regenerator-runtime": "0.13.7",
+    "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.13.16",
@@ -64,7 +66,6 @@
     "@types/lodash": "^4.14.168",
     "@types/node": "12.20.10",
     "@types/react": "17.0.3",
-    "@types/react-bootstrap": "^0.32.25",
     "@types/react-dom": "17.0.3",
     "@types/react-router": "^5.1.13",
     "@types/react-router-config": "5.0.2",
@@ -88,7 +89,6 @@
     "prettier": "2.2.1",
     "ts-jest": "26.5.5",
     "ts-node": "9.1.1",
-    "tslib": "^1.10.0",
     "typescript": "4.2.4"
   },
   "husky": {
