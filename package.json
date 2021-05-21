@@ -60,7 +60,7 @@
     "@nrwl/tao": "11.6.1",
     "@nrwl/web": "11.6.1",
     "@nrwl/workspace": "11.6.1",
-    "@testing-library/react": "11.2.6",
+    "@testing-library/react": "11.2.7",
     "@types/bootbox": "^5.2.1",
     "@types/jest": "26.0.22",
     "@types/lodash": "^4.14.168",
