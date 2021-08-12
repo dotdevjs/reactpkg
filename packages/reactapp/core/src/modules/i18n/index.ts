@@ -5,6 +5,7 @@ import { initReactI18next } from 'react-i18next';
 export const I18nModule = new ContainerModule(
   async (bind: interfaces.Bind, unbind: interfaces.Unbind) => {
     // TODO: resources TOKEN and get from container
+    // TODO: default locale config
     i18n.use(initReactI18next).init({
       resources: {
         en: {
