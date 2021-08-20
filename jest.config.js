@@ -1,7 +1,3 @@
-module.exports = {
-  projects: [
-    '<rootDir>/packages/inversify',
-    '<rootDir>/packages/reactapp/core',
-    '<rootDir>/packages/reactapp/react-table',
-  ],
-};
+const { getJestProjects } = require('@nrwl/jest');
+
+module.exports = { projects: getJestProjects() };
