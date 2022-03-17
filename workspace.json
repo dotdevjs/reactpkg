@@ -6,11 +6,119 @@
   "generators": {
     "@nrwl/react": {
       "application": {
+        "style": "scss",
+        "linter": "eslint",
         "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
       }
     }
   },
   "projects": {
+    "demo": {
+      "root": "e2e/demo",
+      "sourceRoot": "e2e/demo/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/e2e/demo",
+            "index": "e2e/demo/src/index.html",
+            "main": "e2e/demo/src/main.tsx",
+            "polyfills": "e2e/demo/src/polyfills.ts",
+            "tsConfig": "e2e/demo/tsconfig.app.json",
+            "assets": ["e2e/demo/src/favicon.ico", "e2e/demo/src/assets"],
+            "styles": ["e2e/demo/src/styles.scss"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "e2e/demo/src/environments/environment.ts",
+                  "with": "e2e/demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "demo:build",
+            "hmr": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "demo:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["e2e/demo/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/e2e/demo"],
+          "options": {
+            "jestConfig": "e2e/demo/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "demo-e2e": {
+      "root": "e2e/demo-e2e",
+      "sourceRoot": "e2e/demo-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "e2e/demo-e2e/cypress.json",
+            "tsConfig": "e2e/demo-e2e/tsconfig.e2e.json",
+            "devServerTarget": "demo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "demo:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["e2e/demo-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "inversify": {
       "root": "packages/inversify",
       "sourceRoot": "packages/inversify/src",
@@ -18,18 +126,13 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "packages/inversify/dist",
             "tsConfig": "packages/inversify/tsconfig.lib.json",
             "project": "packages/inversify/package.json",
             "entryFile": "packages/inversify/src/index.ts",
-            "external": [
-              "react",
-              "react-dom"
-            ],
+            "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -44,16 +147,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "packages/inversify/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["packages/inversify/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/packages/inversify"
-          ],
+          "outputs": ["coverage/packages/inversify"],
           "options": {
             "jestConfig": "packages/inversify/jest.config.js",
             "passWithNoTests": true
@@ -68,18 +167,13 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "packages/reactapp/core/dist",
             "tsConfig": "packages/reactapp/core/tsconfig.lib.json",
             "project": "packages/reactapp/core/package.json",
             "entryFile": "packages/reactapp/core/src/index.ts",
-            "external": [
-              "react",
-              "react-dom"
-            ],
+            "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -94,16 +188,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "packages/reactapp/core/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["packages/reactapp/core/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/packages/reactapp/core"
-          ],
+          "outputs": ["coverage/packages/reactapp/core"],
           "options": {
             "jestConfig": "packages/reactapp/core/jest.config.js",
             "passWithNoTests": true
@@ -118,18 +208,13 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "packages/reactapp/react-table/dist",
             "tsConfig": "packages/reactapp/react-table/tsconfig.lib.json",
             "project": "packages/reactapp/react-table/package.json",
             "entryFile": "packages/reactapp/react-table/src/index.ts",
-            "external": [
-              "react",
-              "react-dom"
-            ],
+            "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -151,9 +236,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/packages/reactapp/react-table"
-          ],
+          "outputs": ["coverage/packages/reactapp/react-table"],
           "options": {
             "jestConfig": "packages/reactapp/react-table/jest.config.js",
             "passWithNoTests": true
@@ -161,5 +244,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "demo"
 }

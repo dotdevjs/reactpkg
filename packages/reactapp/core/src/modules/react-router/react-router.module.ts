@@ -1,14 +1,14 @@
 import { ContainerModule, interfaces } from 'inversify';
 import { RouteConfig } from 'react-router-config';
 
-import { ROUTES_TOKEN } from './react-router.constants';
 import { RouteCollectionService } from './route-collection.service';
+export const ROUTES_TOKEN = 'ROUTES_TOKEN';
 
-export interface ReactRouterModuleFactoryProps {
+export interface ReactRouterFactoryProps {
   routes?: RouteConfig[];
 }
-export const ReactRouterModuleFactory = (
-  props: ReactRouterModuleFactoryProps = {}
+export const ReactRouterFactory = (
+  props: ReactRouterFactoryProps = {}
 ): ContainerModule => {
   return new ContainerModule(
     (bind: interfaces.Bind, unbind: interfaces.Unbind) => {
@@ -18,11 +18,4 @@ export const ReactRouterModuleFactory = (
   );
 };
 
-export const ReactRouterModule = ReactRouterModuleFactory();
-
-//  export const ReactRouterModule = new ContainerModule(
-//    (bind: interfaces.Bind, unbind: interfaces.Unbind) => {
-//      bind(ROUTES_TOKEN).toConstantValue([]);
-//      bind(RouteCollectionService).to(RouteCollectionService);
-//    }
-//  );
+export const ReactRouterModule = ReactRouterFactory();

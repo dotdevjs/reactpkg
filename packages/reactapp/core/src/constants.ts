@@ -1,4 +1,0 @@
-export const AXIOS_SERVICE = 'AXIOS_SERVICE_TOKEN';
-export const AXIOS_OPTIONS = 'AXIOS_OPTIONS_TOKEN';
-
-// END

@@ -27,6 +27,13 @@
     "libsDir": "packages"
   },
   "projects": {
+    "demo": {
+      "tags": []
+    },
+    "demo-e2e": {
+      "tags": [],
+      "implicitDependencies": ["demo"]
+    },
     "inversify": {
       "tags": []
     },

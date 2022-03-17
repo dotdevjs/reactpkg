@@ -1,2 +1,0 @@
-export const ROUTES_TOKEN = 'ROUTES_TOKEN';
-export const AUTH_ROUTES_TOKEN = 'AUTH_ROUTES_TOKEN';
