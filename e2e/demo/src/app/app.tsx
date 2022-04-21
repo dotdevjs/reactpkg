@@ -3,7 +3,8 @@ import styles from './app.module.scss';
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
 
-import { Route, Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
+import { renderRoutes } from '@reactapp/core';
 
 export function App() {
   return (
@@ -113,7 +114,19 @@ nx affected:e2e
           </li>
         </ul>
       </div>
-      <Route
+      {renderRoutes([
+        {
+          path: '/',
+          exact: true,
+          render: () => (
+            <div>
+              This is the generated root route.{' '}
+              <Link to="/page-2">Click here for page 2.</Link>
+            </div>
+          ),
+        },
+      ])}
+      {/* <Route
         path="/"
         exact
         render={() => (
@@ -131,7 +144,7 @@ nx affected:e2e
             <Link to="/">Click here to go back to root page.</Link>
           </div>
         )}
-      />
+      /> */}
       {/* END: routes */}
     </div>
   );

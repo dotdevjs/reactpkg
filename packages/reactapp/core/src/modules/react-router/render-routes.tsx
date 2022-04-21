@@ -1,12 +1,15 @@
 import lodash from 'lodash';
 import { Container } from '@reactpkg/inversify';
 import { SwitchProps } from 'react-router';
-import { renderRoutes as renderRoutesBase } from 'react-router-config';
+import {
+  renderRoutes as renderRoutesBase,
+  RouteConfig,
+} from 'react-router-config';
 
 import { RouteCollectionService } from './route-collection.service';
 
 export function renderRoutes(
-  routes: any[] | undefined = [],
+  routes: RouteConfig[] | undefined = [],
   extraProps?: any,
   switchProps?: SwitchProps
 ): JSX.Element {

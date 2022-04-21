@@ -21,7 +21,7 @@ jobs:
             node_modules
             ~/.npm
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-      - run: echo //npm.dotdev.ru/:_authToken=${NPM_TOKEN} > .npmrc
+      - run: echo //npm.dotdevio.com/:_authToken=${NPM_TOKEN} > .npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm i -g @nrwl/cli
@@ -35,4 +35,4 @@ jobs:
           SLACK_COLOR: ${{ job.status }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_MESSAGE: '@reactpkg Packages published :rocket:'
-          SLACK_TITLE: 'CI Job runner'
+          SLACK_TITLE: '@dotdevjs/reactpkg'
