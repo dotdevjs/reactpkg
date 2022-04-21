@@ -1,6 +1,6 @@
 {
   "name": "@reactapp/react-table",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "dependencies": {
     "react-bus": "3.0.0",
     "react-data-table-component": "6.11.7"
