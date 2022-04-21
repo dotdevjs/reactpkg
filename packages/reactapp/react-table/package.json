@@ -6,7 +6,7 @@
     "react-data-table-component": "6.11.7"
   },
   "devDependencies": {
-    "@types/bootbox": "5.2.1"
+    "@types/bootbox": "5.2.3"
   },
   "peerDependencies": {
     "react-bootstrap": "~1.6.0"
