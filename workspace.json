@@ -185,7 +185,7 @@
           "executor": "@nrwl/web:package",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/packages/ui",
+            "outputPath": "packages/ui/dist",
             "tsConfig": "packages/ui/tsconfig.lib.json",
             "project": "packages/ui/package.json",
             "entryFile": "packages/ui/src/index.ts",
