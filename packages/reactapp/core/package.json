@@ -1,7 +1,7 @@
 {
   "name": "@reactapp/core",
   "version": "0.0.23",
-  "gitHead": "5b827f44018b08d9b109f4146d685e7a075633fa",
+  "gitHead": "d531f39f748ec9e0a5144fdf41ec141b3d078286",
   "dependencies": {
     "@types/react-router-config": "5.0.6",
     "@types/react-router-dom": "5.3.3",
@@ -10,7 +10,7 @@
     "react-router-named-routes": "0.0.23"
   },
   "peerDependencies": {
-    "react-i18next": "^11.16.7",
-    "i18next": "^21.6.16"
+    "i18next": "^21.6.16",
+    "react-i18next": "^11.16.7"
   }
 }

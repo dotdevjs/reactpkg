@@ -3,5 +3,6 @@
   "version": "0.0.23",
   "dependencies": {
     "react-data-table-component": "7.5.0"
-  }
+  },
+  "gitHead": "d531f39f748ec9e0a5144fdf41ec141b3d078286"
 }
