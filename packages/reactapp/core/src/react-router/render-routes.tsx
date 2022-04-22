@@ -1,12 +1,12 @@
 import lodash from 'lodash';
-import { Container } from '@reactpkg/inversify';
+import { Container } from '@dotdevjs/inversify';
 import { SwitchProps } from 'react-router';
 import {
   renderRoutes as renderRoutesBase,
   RouteConfig,
 } from 'react-router-config';
 
-import { RouteCollectionService } from './route-collection.service';
+import { RouteCollectionService } from './route-collection';
 
 export function renderRoutes(
   routes: RouteConfig[] | undefined = [],

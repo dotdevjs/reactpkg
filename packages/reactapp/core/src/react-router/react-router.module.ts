@@ -1,7 +1,7 @@
 import { ContainerModule, interfaces } from 'inversify';
 import { RouteConfig } from 'react-router-config';
 
-import { RouteCollectionService } from './route-collection.service';
+import { RouteCollectionService } from './route-collection';
 export const ROUTES_TOKEN = 'ROUTES_TOKEN';
 
 export interface ReactRouterFactoryProps {
