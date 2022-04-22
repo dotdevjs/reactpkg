@@ -6,6 +6,5 @@
   },
   "peerDependencies": {
     "reflect-metadata": "0.1.13"
-  },
-  "gitHead": "d531f39f748ec9e0a5144fdf41ec141b3d078286"
+  }
 }

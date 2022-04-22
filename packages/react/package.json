@@ -1,7 +1,6 @@
 {
   "name": "@dotdev/react",
   "version": "0.0.26",
-  "gitHead": "480569aa7be2a74a7245249f0229489acb2012d2",
   "dependencies": {
     "@types/react-router-config": "5.0.6",
     "react-router-named-routes": "0.0.23"
