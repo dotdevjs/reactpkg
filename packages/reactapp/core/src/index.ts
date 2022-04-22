@@ -1,1 +1,1 @@
-export * from './modules/react-router';
+export * from './react-router';

@@ -1,6 +1,6 @@
 export * from './react-router.module';
 export * from './render-routes';
-export * from './route-collection.service';
+export * from './route-collection';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { formatRoute } = require('react-router-named-routes');
