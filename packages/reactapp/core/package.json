@@ -1,7 +1,7 @@
 {
   "name": "@reactapp/core",
   "version": "0.0.23",
-  "gitHead": "6eafe9cac8f46687fbbf1596543b96a65e2a5c12",
+  "gitHead": "480569aa7be2a74a7245249f0229489acb2012d2",
   "dependencies": {
     "@types/react-router-config": "5.0.6",
     "@types/react-router-dom": "5.3.3",
