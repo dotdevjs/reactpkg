@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'reactapp-core',
+  displayName: 'react',
   preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',

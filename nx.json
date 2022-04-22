@@ -27,13 +27,13 @@
     "libsDir": "packages"
   },
   "projects": {
-    "demo": {
+    "docs": {
       "tags": []
     },
     "inversify": {
       "tags": []
     },
-    "reactapp-core": {
+    "react": {
       "tags": []
     },
     "ui": {
