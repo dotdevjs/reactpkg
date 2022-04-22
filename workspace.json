@@ -108,7 +108,6 @@
             "project": "packages/inversify/package.json",
             "entryFile": "packages/inversify/src/index.ts",
             "external": ["react", "react-dom"],
-            "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
               {
@@ -150,7 +149,6 @@
             "project": "packages/react/package.json",
             "entryFile": "packages/react/src/index.ts",
             "external": ["react", "react-dom"],
-            "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
               {

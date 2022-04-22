@@ -1,12 +1,11 @@
 import { flattenDeep } from 'lodash';
-// import { RouteProps } from 'react-router';
+import { RouteConfig } from 'react-router-config';
 import { Inject, Injectable, InversifyContainer } from '@dotdev/inversify';
 
-import { RouteConfig } from 'react-router-config';
-import { ROUTES_TOKEN } from './react-router.module';
+export const ROUTES_TOKEN = 'ROUTES_TOKEN';
 
 @Injectable()
-export class RouteCollectionService {
+export class RouteCollection {
   @Inject(InversifyContainer)
   private container: InversifyContainer;
 
@@ -17,8 +16,9 @@ export class RouteCollectionService {
         this.container.getAllTagged(ROUTES_TOKEN, ROUTES_TOKEN, [])
       );
     } catch (e) {
-      console.error(e);
+      console.log(`[App] Skip routes`);
     }
+
     return routes;
   }
 }
