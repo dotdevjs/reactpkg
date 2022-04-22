@@ -28,23 +28,18 @@
   },
   "private": true,
   "dependencies": {
-    "axios": "^0.21.1",
     "core-js": "3.11.0",
     "document-register-element": "1.14.10",
-    "i18next": "^20.2.1",
-    "inversify": "5.0.5",
+    "inversify": "6.0.1",
     "lodash": "4.17.21",
     "react": "17.0.2",
-    "react-bootstrap": "^1.6.0",
-    "react-bus": "^3.0.0",
-    "react-data-table-component": "^6.11.7",
+    "react-data-table-component": "7.5.0",
     "react-dom": "17.0.2",
-    "react-i18next": "^11.8.13",
-    "react-router": "^5.2.0",
-    "react-router-config": "5.1.1",
+    "react-router": "5.3.1",
     "react-router-dom": "5.3.1",
+    "react-router-config": "5.1.1",
     "react-router-named-routes": "0.0.23",
-    "reflect-metadata": "^0.1.13",
+    "reflect-metadata": "0.1.13",
     "regenerator-runtime": "0.13.7",
     "tslib": "^2.0.0"
   },
@@ -64,13 +59,12 @@
     "@nrwl/workspace": "12.10.1",
     "@testing-library/react": "11.2.6",
     "@testing-library/react-hooks": "7.0.1",
-    "@types/bootbox": "^5.2.1",
     "@types/jest": "27.0.2",
     "@types/lodash": "^4.14.168",
     "@types/node": "12.20.10",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",
-    "@types/react-router": "^5.1.13",
+    "@types/react-router": "2.0.61",
     "@types/react-router-config": "5.0.6",
     "@types/react-router-dom": "5.3.3",
     "@typescript-eslint/eslint-plugin": "4.31.2",
@@ -92,7 +86,6 @@
     "lerna": "4.0.0",
     "lint-staged": "10.5.4",
     "prettier": "2.3.2",
-    "react-refresh": "^0.11.0",
     "ts-jest": "27.0.5",
     "ts-node": "9.1.1",
     "typescript": "4.3.5"
@@ -108,6 +101,6 @@
     ]
   },
   "engines": {
-    "node": ">=15"
+    "node": ">=16"
   }
 }
