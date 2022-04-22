@@ -1,8 +1,0 @@
-{
-  "name": "@reactpkg/react-table",
-  "version": "0.0.23",
-  "dependencies": {
-    "react-data-table-component": "7.5.0"
-  },
-  "gitHead": "480569aa7be2a74a7245249f0229489acb2012d2"
-}

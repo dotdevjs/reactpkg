@@ -5,12 +5,21 @@ on:
     tags:
       - '*'
 
+env:
+  NPM_REGISTRY: npm.dotdevio.com
+
+  # Slack
+  SLACK_ICON: https://github.com/dotdevq.png?size=48
+  SLACK_USERNAME: 'CI Bot'
+  SLACK_MESSAGE: '@dotdevjs/reactpkg Published :rocket:'
+  SLACK_TITLE: '@dotdevjs/reactpkg'
+
 jobs:
   publish:
     runs-on: ubuntu-latest
 
     container:
-      image: node:15-alpine
+      image: node:16-alpine
 
     steps:
       - uses: actions/checkout@v2
@@ -21,7 +30,7 @@ jobs:
             node_modules
             ~/.npm
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-      - run: echo //npm.dotdevio.com/:_authToken=${NPM_TOKEN} > .npmrc
+      - run: echo //${NPM_REGISTRY}/:_authToken=${NPM_TOKEN} > .npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm i -g @nrwl/cli@^12
@@ -34,5 +43,7 @@ jobs:
         env:
           SLACK_COLOR: ${{ job.status }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_MESSAGE: '@reactpkg Packages published :rocket:'
-          SLACK_TITLE: '@dotdevjs/reactpkg'
+          SLACK_ICON: ${{ env.SLACK_ICON }}
+          SLACK_USERNAME: ${{ env.SLACK_USERNAME }}
+          SLACK_MESSAGE: ${{ env.SLACK_MESSAGE }}
+          SLACK_TITLE: ${{ env.SLACK_TITLE }}

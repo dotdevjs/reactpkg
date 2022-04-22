@@ -1,0 +1,7 @@
+{
+  "name": "@dotdev/ui",
+  "version": "0.0.23",
+  "dependencies": {
+    "react-data-table-component": "7.5.0"
+  }
+}

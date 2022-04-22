@@ -1,6 +1,6 @@
 import { flattenDeep } from 'lodash';
 // import { RouteProps } from 'react-router';
-import { Inject, Injectable, InversifyContainer } from '@dotdevjs/inversify';
+import { Inject, Injectable, InversifyContainer } from '@dotdev/inversify';
 
 import { RouteConfig } from 'react-router-config';
 import { ROUTES_TOKEN } from './react-router.module';

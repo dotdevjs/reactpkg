@@ -1,5 +1,5 @@
 {
-  "name": "@dotdevjs/inversify",
+  "name": "@dotdev/inversify",
   "version": "0.0.23",
   "dependencies": {
     "inversify": "6.0.1"

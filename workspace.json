@@ -137,18 +137,18 @@
       }
     },
     "reactapp-core": {
-      "root": "packages/reactapp/core",
-      "sourceRoot": "packages/reactapp/core/src",
+      "root": "packages/react",
+      "sourceRoot": "packages/react/src",
       "projectType": "library",
       "targets": {
         "build": {
           "executor": "@nrwl/web:package",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "packages/reactapp/core/dist",
-            "tsConfig": "packages/reactapp/core/tsconfig.lib.json",
-            "project": "packages/reactapp/core/package.json",
-            "entryFile": "packages/reactapp/core/src/index.ts",
+            "outputPath": "packages/react/dist",
+            "tsConfig": "packages/react/tsconfig.lib.json",
+            "project": "packages/react/package.json",
+            "entryFile": "packages/react/src/index.ts",
             "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
@@ -164,39 +164,38 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["packages/reactapp/core/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": ["packages/react/**/*.{ts,tsx,js,jsx}"]
           },
           "outputs": ["{options.outputFile}"]
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/packages/reactapp/core"],
+          "outputs": ["coverage/packages/react"],
           "options": {
-            "jestConfig": "packages/reactapp/core/jest.config.js",
+            "jestConfig": "packages/react/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "reactapp-react-table": {
-      "root": "packages/reactapp/react-table",
-      "sourceRoot": "packages/reactapp/react-table/src",
+    "ui": {
+      "root": "packages/ui",
+      "sourceRoot": "packages/ui/src",
       "projectType": "library",
       "targets": {
         "build": {
           "executor": "@nrwl/web:package",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "packages/reactapp/react-table/dist",
-            "tsConfig": "packages/reactapp/react-table/tsconfig.lib.json",
-            "project": "packages/reactapp/react-table/package.json",
-            "entryFile": "packages/reactapp/react-table/src/index.ts",
-            "external": ["react", "react-dom"],
-            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "outputPath": "dist/packages/ui",
+            "tsConfig": "packages/ui/tsconfig.lib.json",
+            "project": "packages/ui/package.json",
+            "entryFile": "packages/ui/src/index.ts",
+            "external": ["react/jsx-runtime"],
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
               {
-                "glob": "README.md",
+                "glob": "packages/ui/README.md",
                 "input": ".",
                 "output": "."
               }
@@ -205,18 +204,16 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": [
-              "packages/reactapp/react-table/**/*.{ts,tsx,js,jsx}"
-            ]
-          },
-          "outputs": ["{options.outputFile}"]
+            "lintFilePatterns": ["packages/ui/**/*.{ts,tsx,js,jsx}"]
+          }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/packages/reactapp/react-table"],
+          "outputs": ["coverage/packages/ui"],
           "options": {
-            "jestConfig": "packages/reactapp/react-table/jest.config.js",
+            "jestConfig": "packages/ui/jest.config.js",
             "passWithNoTests": true
           }
         }

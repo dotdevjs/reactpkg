@@ -1,16 +1,12 @@
 {
-  "name": "@reactapp/core",
+  "name": "@dotdev/react",
   "version": "0.0.23",
   "gitHead": "480569aa7be2a74a7245249f0229489acb2012d2",
   "dependencies": {
     "@types/react-router-config": "5.0.6",
-    "@types/react-router-dom": "5.3.3",
-    "react-router-config": "5.1.1",
-    "react-router-dom": "5.3.1",
     "react-router-named-routes": "0.0.23"
   },
   "peerDependencies": {
-    "i18next": "^21.6.16",
-    "react-i18next": "^11.16.7"
+    "react-router-config": "5.1.1"
   }
 }

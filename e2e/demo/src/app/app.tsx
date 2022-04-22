@@ -4,7 +4,7 @@ import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
 
 import { Switch, Route, Link } from 'react-router-dom';
-import { renderRoutes } from '@reactapp/core';
+import { renderRoutes } from '@dotdev/react';
 
 export function App() {
   return (

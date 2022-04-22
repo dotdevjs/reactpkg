@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { Container, InversifyProvider } from '@dotdevjs/inversify';
+import { Container, InversifyProvider } from '@dotdev/inversify';
 
 import App from './app/app';
 

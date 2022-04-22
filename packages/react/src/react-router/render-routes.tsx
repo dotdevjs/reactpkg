@@ -1,5 +1,5 @@
 import lodash from 'lodash';
-import { Container } from '@dotdevjs/inversify';
+import { Container } from '@dotdev/inversify';
 import { SwitchProps } from 'react-router';
 import {
   renderRoutes as renderRoutesBase,
