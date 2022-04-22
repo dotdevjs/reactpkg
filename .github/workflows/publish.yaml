@@ -35,7 +35,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm i -g @nrwl/cli@^12
       - run: npm ci
-      - run: nx affected:build --all
+      - run: nx affected:build --all --production
       - run: npm run lerna -- publish from-package --contents dist -y
 
       - name: Slack Notification
