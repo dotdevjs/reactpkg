@@ -5,13 +5,16 @@ import star from './star.svg';
 
 import { Switch, Route, Link } from 'react-router-dom';
 import { renderRoutes } from '@dotdev/react';
+import { useContainer } from '@dotdev/inversify';
+import { TEST_SERVICE } from './app.module';
 
 export function App() {
+  const [hello] = useContainer<[string]>(TEST_SERVICE);
   return (
     <div className={styles.app}>
       <header className="flex">
         <Logo width="75" height="75" />
-        <h1>Welcome to demo!</h1>
+        <h1>{hello}!</h1>
       </header>
       <main>
         <h2>Resources &amp; Tools</h2>
@@ -126,25 +129,6 @@ nx affected:e2e
           ),
         },
       ])}
-      {/* <Route
-        path="/"
-        exact
-        render={() => (
-          <div>
-            This is the generated root route.{' '}
-            <Link to="/page-2">Click here for page 2.</Link>
-          </div>
-        )}
-      />
-      <Route
-        path="/page-2"
-        exact
-        render={() => (
-          <div>
-            <Link to="/">Click here to go back to root page.</Link>
-          </div>
-        )}
-      /> */}
       {/* END: routes */}
     </div>
   );

@@ -1,1 +1,1 @@
-export * from './hooks/datatable.hook';
+export * from './datatable.hook';

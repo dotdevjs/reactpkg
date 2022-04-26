@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+    "**/tsconfig.app.json": true,
+    "**/tsconfig.spec.json": true,
+    "**/tsconfig.lib.json": true,
+    "**/.eslintrc.json": true,
+    "**/jest.config.js": true,
+    "**/.browserslistrc": true,
+    "**/.babelrc": true,
+    "**/tmp": true
+  }
+}
