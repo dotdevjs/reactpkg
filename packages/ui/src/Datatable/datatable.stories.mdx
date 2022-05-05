@@ -1,0 +1,46 @@
+<!-- Checkbox.stories.mdx -->
+
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import DataTable from 'react-data-table-component';
+import { useDataTable } from './datatable.hook';
+
+<Meta title="Datatable/useDataTable" />
+<!-- <Meta title="MDX/Checkbox" component={Checkbox} />-->
+
+# useDataTable
+
+Use this hook with `react-datatable`.
+
+<Canvas>
+  <Story name="Default">
+    {() => {
+      const columns = [
+        {
+          name: 'Title',
+          selector: row => row.title,
+        },
+      ];
+
+      const data = [
+        {
+          id: 1,
+          title: 'Beetlejuice',
+        },
+        {
+          id: 2,
+          title: 'Ghostbusters',
+        },
+      ]
+
+      const [totalRows, setTotalRows] = useDataTable();
+
+      return (
+         <DataTable
+            columns={columns}
+            data={data}
+        />
+      )
+    }}
+  </Story>
+</Canvas>

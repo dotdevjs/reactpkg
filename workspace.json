@@ -20,22 +20,22 @@
     }
   },
   "projects": {
-    "docs": {
-      "root": "e2e/docs",
-      "sourceRoot": "e2e/docs/src",
+    "demo": {
+      "root": "e2e/demo",
+      "sourceRoot": "e2e/demo/src",
       "projectType": "application",
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/e2e/docs",
-            "index": "e2e/docs/src/index.html",
-            "main": "e2e/docs/src/main.tsx",
-            "polyfills": "e2e/docs/src/polyfills.ts",
-            "tsConfig": "e2e/docs/tsconfig.app.json",
-            "assets": ["e2e/docs/src/favicon.ico", "e2e/docs/src/assets"],
-            "styles": ["e2e/docs/src/styles.scss"],
+            "outputPath": "dist/e2e/demo",
+            "index": "e2e/demo/src/index.html",
+            "main": "e2e/demo/src/main.tsx",
+            "polyfills": "e2e/demo/src/polyfills.ts",
+            "tsConfig": "e2e/demo/tsconfig.app.json",
+            "assets": ["e2e/demo/src/favicon.ico", "e2e/demo/src/assets"],
+            "styles": ["e2e/demo/src/styles.scss"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -43,8 +43,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "e2e/docs/src/environments/environment.ts",
-                  "with": "e2e/docs/src/environments/environment.prod.ts"
+                  "replace": "e2e/demo/src/environments/environment.ts",
+                  "with": "e2e/demo/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -67,12 +67,12 @@
         "serve": {
           "executor": "@nrwl/web:dev-server",
           "options": {
-            "buildTarget": "docs:build",
+            "buildTarget": "demo:build",
             "hmr": true
           },
           "configurations": {
             "production": {
-              "buildTarget": "docs:build:production",
+              "buildTarget": "demo:build:production",
               "hmr": false
             }
           }
@@ -80,15 +80,15 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["e2e/docs/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": ["e2e/demo/**/*.{ts,tsx,js,jsx}"]
           },
           "outputs": ["{options.outputFile}"]
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/e2e/docs"],
+          "outputs": ["coverage/e2e/demo"],
           "options": {
-            "jestConfig": "e2e/docs/jest.config.js",
+            "jestConfig": "e2e/demo/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -214,9 +214,40 @@
             "jestConfig": "packages/ui/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "storybook": {
+          "executor": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "port": 4400,
+            "config": {
+              "configFolder": "packages/ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "executor": "@nrwl/storybook:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "uiFramework": "@storybook/react",
+            "outputPath": "dist/storybook/ui",
+            "config": {
+              "configFolder": "packages/ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
         }
       }
     }
   },
-  "defaultProject": "docs"
+  "defaultProject": "demo"
 }
