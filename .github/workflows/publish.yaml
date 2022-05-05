@@ -10,7 +10,7 @@ env:
 
   # Slack
   SLACK_ICON: https://github.com/dotdevq.png?size=48
-  SLACK_USERNAME: 'CI Bot'
+  SLACK_USERNAME: 'GitHub CI'
   SLACK_MESSAGE: '@dotdevjs/reactpkg Published :rocket:'
   SLACK_TITLE: '@dotdevjs/reactpkg'
 
