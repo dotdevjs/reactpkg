@@ -1,20 +1,24 @@
-import styles from './app.module.scss';
-
-import { ReactComponent as Logo } from './logo.svg';
-import star from './star.svg';
-
+import { useTranslation } from 'react-i18next';
 import { Switch, Route, Link } from 'react-router-dom';
 import { renderRoutes } from '@dotdev/react';
 import { useContainer } from '@dotdev/inversify';
+
 import { TEST_SERVICE } from './app.module';
 
+import star from './star.svg';
+import { ReactComponent as Logo } from './logo.svg';
+
+import styles from './app.module.scss';
+
 export function App() {
+  const { t } = useTranslation();
   const [hello] = useContainer<[string]>(TEST_SERVICE);
   return (
     <div className={styles.app}>
       <header className="flex">
         <Logo width="75" height="75" />
         <h1>{hello}!</h1>
+        <h2>{t('test')}</h2>
       </header>
       <main>
         <h2>Resources &amp; Tools</h2>
