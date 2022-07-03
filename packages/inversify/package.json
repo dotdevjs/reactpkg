@@ -2,10 +2,10 @@
   "name": "@dotdev/inversify",
   "version": "0.0.33",
   "dependencies": {
-    "inversify": "6.0.1",
-    "react": "*"
+    "inversify": "6.0.1"
   },
   "peerDependencies": {
+    "react": ">=17.0.0",
     "reflect-metadata": "0.1.13"
   },
   "gitHead": "e199e6205a8aecaf1f0c09bec108e9aa6e6e5d65"
