@@ -1,5 +1,6 @@
 import { ContainerModule, interfaces } from '@dotdev/inversify';
 
+// TODO: remove
 export const TEST_SERVICE = 'TEST';
 
 export const AppModule = new ContainerModule(
