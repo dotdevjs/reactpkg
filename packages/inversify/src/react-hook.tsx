@@ -9,6 +9,7 @@ const InversifyContext = React.createContext<{
 
 type Props = {
   container: InversifyContainer;
+  children: React.ReactNode;
 };
 
 export const InversifyProvider: React.FC<Props> = (props) => {
