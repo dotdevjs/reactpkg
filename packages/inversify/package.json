@@ -3,7 +3,7 @@
   "version": "0.0.32",
   "dependencies": {
     "inversify": "6.0.1",
-    "react": "~17.0.2"
+    "react": "*"
   },
   "peerDependencies": {
     "reflect-metadata": "0.1.13"
