@@ -12,6 +12,8 @@ type Props = {
   children: React.ReactNode;
 };
 
+// TODO: react 18+
+
 export const InversifyProvider: React.FC<Props> = (props) => {
   return (
     <InversifyContext.Provider value={{ container: props.container }}>
