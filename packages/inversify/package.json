@@ -2,6 +2,7 @@
   "name": "@dotdev/inversify",
   "version": "0.0.30",
   "dependencies": {
+    "react": ">=17.0.2",
     "inversify": "6.0.1"
   },
   "peerDependencies": {
