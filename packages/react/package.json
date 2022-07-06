@@ -1,14 +1,10 @@
 {
   "name": "@dotdev/react",
   "version": "0.0.37",
-  "dependencies": {
-    "@types/react-router-config": "5.0.6",
-    "react-router-named-routes": "0.0.23"
-  },
   "peerDependencies": {
+    "react": ">=17.0.0",
     "i18next": "~21.6.16",
-    "react-i18next": "~11.16.7",
-    "react-router-config": "~5.1.1"
+    "react-i18next": "~11.16.7"
   },
   "gitHead": "e199e6205a8aecaf1f0c09bec108e9aa6e6e5d65"
 }
