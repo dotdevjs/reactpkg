@@ -1,24 +1,5 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/react"
-  },
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "style": "scss",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "scss"
-      },
-      "library": {
-        "style": "scss",
-        "linter": "eslint"
-      }
-    }
-  },
   "projects": {
     "demo": {
       "root": "e2e/demo",
@@ -26,7 +7,7 @@
       "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nrwl/web:build",
+          "executor": "@nrwl/webpack:webpack",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/e2e/demo",
@@ -65,7 +46,7 @@
           }
         },
         "serve": {
-          "executor": "@nrwl/web:dev-server",
+          "executor": "@nrwl/webpack:dev-server",
           "options": {
             "buildTarget": "demo:build",
             "hmr": true
@@ -74,8 +55,12 @@
             "production": {
               "buildTarget": "demo:build:production",
               "hmr": false
+            },
+            "development": {
+              "buildTarget": "demo:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -88,11 +73,12 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/e2e/demo"],
           "options": {
-            "jestConfig": "e2e/demo/jest.config.js",
+            "jestConfig": "e2e/demo/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "inversify": {
       "root": "packages/inversify",
@@ -100,7 +86,7 @@
       "projectType": "library",
       "targets": {
         "build": {
-          "executor": "@nrwl/web:package",
+          "executor": "@nrwl/web:rollup",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "packages/inversify/dist",
@@ -129,11 +115,12 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/packages/inversify"],
           "options": {
-            "jestConfig": "packages/inversify/jest.config.js",
+            "jestConfig": "packages/inversify/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "react": {
       "root": "packages/react",
@@ -141,7 +128,7 @@
       "projectType": "library",
       "targets": {
         "build": {
-          "executor": "@nrwl/web:package",
+          "executor": "@nrwl/web:rollup",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "packages/react/dist",
@@ -170,11 +157,12 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/packages/react"],
           "options": {
-            "jestConfig": "packages/react/jest.config.js",
+            "jestConfig": "packages/react/jest.config.ts",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "ui": {
       "root": "packages/ui",
@@ -182,7 +170,7 @@
       "projectType": "library",
       "targets": {
         "build": {
-          "executor": "@nrwl/web:package",
+          "executor": "@nrwl/web:rollup",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "packages/ui/dist",
@@ -211,43 +199,12 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/packages/ui"],
           "options": {
-            "jestConfig": "packages/ui/jest.config.js",
+            "jestConfig": "packages/ui/jest.config.ts",
             "passWithNoTests": true
           }
-        },
-        "storybook": {
-          "executor": "@nrwl/storybook:storybook",
-          "options": {
-            "uiFramework": "@storybook/react",
-            "port": 4400,
-            "config": {
-              "configFolder": "packages/ui/.storybook"
-            }
-          },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
-          }
-        },
-        "build-storybook": {
-          "executor": "@nrwl/storybook:build",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "uiFramework": "@storybook/react",
-            "outputPath": "dist/storybook/ui",
-            "config": {
-              "configFolder": "packages/ui/.storybook"
-            }
-          },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
-          }
         }
-      }
+      },
+      "tags": []
     }
-  },
-  "defaultProject": "demo"
+  }
 }

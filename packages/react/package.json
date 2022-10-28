@@ -2,9 +2,7 @@
   "name": "@dotdev/react",
   "version": "0.0.38",
   "peerDependencies": {
-    "i18next": "~21.6.16",
-    "react": ">=17.0.0",
-    "react-i18next": "~11.16.7"
+    "dotdev/inversify": "*"
   },
   "gitHead": "c248c5ac223c37936eaa38978ec917ae0f2f9b96"
 }

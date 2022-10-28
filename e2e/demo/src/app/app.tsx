@@ -1,6 +1,5 @@
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Switch, Route, Link } from 'react-router-dom';
-import { renderRoutes } from '@dotdev/react';
 import { useContainer } from '@dotdev/inversify';
 
 import { TEST_SERVICE } from './app.module';
@@ -121,18 +120,7 @@ nx affected:e2e
           </li>
         </ul>
       </div>
-      {renderRoutes([
-        {
-          path: '/',
-          exact: true,
-          render: () => (
-            <div>
-              This is the generated root route.{' '}
-              <Link to="/page-2">Click here for page 2.</Link>
-            </div>
-          ),
-        },
-      ])}
+
       {/* END: routes */}
     </div>
   );
