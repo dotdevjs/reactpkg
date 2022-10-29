@@ -22,7 +22,7 @@ jobs:
       image: node:16-alpine
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Cache node_modules
         uses: actions/cache@v2
         with:
