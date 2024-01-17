@@ -34,7 +34,7 @@
     "core-js": "3.11.0",
     "document-register-element": "1.14.10",
     "i18next": "^21.6.16",
-    "inversify": "6.0.1",
+    "inversify": "6.0.2",
     "lodash": "4.17.21",
     "react": "18.2.0",
     "react-data-table-component": "7.5.3",
