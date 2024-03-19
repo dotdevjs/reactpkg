@@ -31,7 +31,7 @@
     "@storybook/builder-webpack5": "6.5.13",
     "@storybook/core-server": "6.5.13",
     "@storybook/manager-webpack5": "6.5.13",
-    "core-js": "3.11.0",
+    "core-js": "3.36.1",
     "document-register-element": "1.14.10",
     "i18next": "^21.6.16",
     "inversify": "6.0.1",
